@@ -1,15 +1,3 @@
-import re
-
-def line_fetch_pattern_match(lp):
-    mobile_list =[]
-    for line in lp:
-        m1 = re.findall("[5-9]{1}[0-9]{9}", line)
-        if len(m1) == 0:
-            continue
-        else:
-            mobile_list.append(m1[0])
-    return mobile_list
-
 def file_read(filepath):
     fp = open(filepath)
     data =fp.readlines()
